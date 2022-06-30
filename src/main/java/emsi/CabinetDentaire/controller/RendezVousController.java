@@ -19,7 +19,7 @@ public class RendezVousController {
 
 	@GetMapping("/listRdv/{id}")
 	public String viewRdvPage(@PathVariable (value = "id") long id,Model model) {
-		model.addAttribute("listRendezVous", rendezVousService.getAllRendezVous());
+		model.addAttribute("listRendezVous", rendezVousService.getRendezVousById(id));
 		return "listRdv";
 	}
 	
